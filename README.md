@@ -14,3 +14,15 @@ Code:
   viewer();
 Expected Output:
   Viewer("Thomas", "Noon", "63");
+
+Describe addViewer();
+
+Test 1: It should add viewer to our empty ticket array
+Code:
+  let ticket = new Ticket();
+  let viewer = new Viewer("Thomas", "Noon", "63");
+  viewer();
+  ticket.addViewer();
+  ticket.viewer
+Expected Output:
+  ("Thomas", "Noon", "63");
