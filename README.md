@@ -26,3 +26,17 @@ Code:
   ticket.viewer
 Expected Output:
   ("Thomas", "Noon", "63");
+
+  Describe: assignId()
+
+  Test 1: It should assign an Id
+  Code:
+   let ticket = new Ticket();
+  let viewer = new Viewer("Thomas", "Noon", "63");
+  viewer();
+  ticket.addViewer();
+  ticket.viewer
+
+  Expected Output:
+  have viewer 1 with an Id 1
+  have viewer 2 with an Id 2

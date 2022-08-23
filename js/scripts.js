@@ -1,9 +1,17 @@
+//Business Logic for Ticket
 function Ticket() {
   this.viewers = {};
+  this.currentId = 0;
 }
 
 Ticket.prototype.addViewer = function(viewer) {
-  this.viewers[viewer.name] = viewer;
+  viewer.id = this.assignId()
+  this.viewers[viewer.id] = viewer;
+}
+
+Ticket.prototype.assignId = function() {
+  this.currentId += 1;
+  return this.currentId;
 }
 
 function Viewer(name, showTime, age) {
