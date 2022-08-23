@@ -14,10 +14,10 @@ Ticket.prototype.assignId = function() {
   return this.currentId;
 }
 
-function Viewer(name, showTime, age) {
-  this.name = name;
+function Viewer(nameMovie, showTime, age) {
+  this.nameMovie = nameMovie;
   this.showTime = showTime;
-  this.age = age;
+  this.age = parseInt(age);
 }
 
 Ticket.prototype.findViewer = function(id) {
@@ -26,3 +26,13 @@ Ticket.prototype.findViewer = function(id) {
   }
   return false;
 };
+
+Ticket.prototype.costViewer = function(id) {
+  if (viewer.age >= 65) {
+  return "$15"
+  } else if (viewer.age <= 5) {
+  return "free"
+  } else {
+  return "$20"
+  }
+}

@@ -53,8 +53,3 @@ Code:
 Expected Output:
   (Viewer: "Thomas", "Noon", "63");
 
-
-Describe deleteViewer();
-Test 1:
-Code:
-Expected Output:
