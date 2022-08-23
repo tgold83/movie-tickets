@@ -19,3 +19,10 @@ function Viewer(name, showTime, age) {
   this.showTime = showTime;
   this.age = age;
 }
+
+Ticket.prototype.findViewer = function(id) {
+  if (this.viewers[id] !== undefined) {
+    return this.viewers[id];
+  }
+  return false;
+};
